@@ -2,8 +2,8 @@
     <string name="app_name">Calculator</string>
     <string name="_7">7</string>
     <string name="_8">8</string>
-    <string name="_2">btnTwo</string>
-    <string name="_1">btnOne</string>
+    <string name="_2">2</string>
+    <string name="_1">3</string>
     <string name="_6">6</string>
     <string name="_5">5</string>
     <string name="_4">4</string>
@@ -21,5 +21,4 @@
     <string name="minus2">-</string>
     <string name="equals">=</string>
     <string name="percentage">%</string>
-    <string name="dot">.</string>
 </resources>

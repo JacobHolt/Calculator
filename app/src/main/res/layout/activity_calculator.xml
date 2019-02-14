@@ -48,7 +48,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnSeven"
+        android:id="@+id/7"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
@@ -64,7 +64,7 @@
         app:layout_constraintTop_toBottomOf="@+id/guideline" />
 
     <Button
-        android:id="@+id/btnEight"
+        android:id="@+id/8"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="4dp"
@@ -79,7 +79,7 @@
         app:layout_constraintTop_toBottomOf="@+id/guideline" />
 
     <Button
-        android:id="@+id/btnNine"
+        android:id="@+id/9"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="4dp"
@@ -113,7 +113,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="6dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="4dp"
         android:text="@string/clear"
@@ -124,7 +124,7 @@
         app:layout_constraintTop_toBottomOf="@+id/guideline" />
 
     <Button
-        android:id="@+id/btnFour"
+        android:id="@+id/4"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
@@ -140,7 +140,7 @@
         app:layout_constraintTop_toBottomOf="@+id/7" />
 
     <Button
-        android:id="@+id/btnFive"
+        android:id="@+id/5"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="4dp"
@@ -155,7 +155,7 @@
         app:layout_constraintTop_toBottomOf="@+id/8" />
 
     <Button
-        android:id="@+id/btnSix"
+        android:id="@+id/6"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="4dp"
@@ -200,7 +200,7 @@
         app:layout_constraintTop_toBottomOf="@+id/clear" />
 
     <Button
-        android:id="@+id/btnOne"
+        android:id="@+id/1"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
@@ -216,7 +216,7 @@
         app:layout_constraintTop_toBottomOf="@+id/4" />
 
     <Button
-        android:id="@+id/btnTwo"
+        android:id="@+id/2"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="4dp"
@@ -231,7 +231,7 @@
         app:layout_constraintTop_toBottomOf="@+id/5" />
 
     <Button
-        android:id="@+id/btnThree"
+        android:id="@+id/3"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="4dp"
@@ -291,7 +291,7 @@
         app:layout_constraintTop_toBottomOf="@+id/1" />
 
     <Button
-        android:id="@+id/zero"
+        android:id="@+id/0"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="4dp"
@@ -325,10 +325,10 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="3dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="4dp"
         android:layout_marginBottom="8dp"
-        android:text="@string/dot"
+        android:text="@string/plus2"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toStartOf="@+id/equals"
         app:layout_constraintHorizontal_bias="0.5"
