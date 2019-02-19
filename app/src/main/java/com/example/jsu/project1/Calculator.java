@@ -26,10 +26,32 @@ public class Calculator extends AppCompatActivity {
         if(id.contains("button")) {
             String numberString = id.replaceAll("[^0-9]", "");
             number = Integer.parseInt(numberString);
+            if(textViewString == "") {
+                textViewString = "" + number;
+                textView.setText(textViewString);
+            }
+            else {
+                textViewString = textViewString + " " + number;
+                textView.setText(textViewString);
+            }
         }
-        else {
+        else if(id.contains("multiply")){
+            textViewString = textViewString + " *";
+            textView.setText(textViewString);
+        }
+        else if(id.contains("divide")){
+            textViewString = textViewString + " /";
+            textView.setText(textViewString);
+        }
+        else if(id.contains("plus")){
+            textViewString = textViewString + " +";
+            textView.setText(textViewString);
+        }
+        else if(id.contains("minus")){
+            textViewString = textViewString + " -";
+            textView.setText(textViewString);
+        }
 
-        }
     }
 
     public int multiply(int a, int b) {
