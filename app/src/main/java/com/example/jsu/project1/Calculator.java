@@ -19,19 +19,29 @@ public class Calculator extends AppCompatActivity {
 
     public void onClick(View v) {
         String id = (v.getResources().getResourceName(v.getId())).split("/")[1];
-        System.out.println(id);
+        TextView textView = (TextView) findViewById(R.id.mainText);
+        String textViewString = "";
+        int number;
+
+        if(id.contains("button")) {
+            String numberString = id.replaceAll("[^0-9]", "");
+            number = Integer.parseInt(numberString);
+        }
+        else {
+
+        }
     }
 
     public int multiply(int a, int b) {
-        return 0;
+        return a * b;
     }
     public int divide(int a, int b) {
-        return 0;
+        return a / b;
     }
     public int add(int a, int b) {
-        return 0;
+        return a + b;
     }
     public int subtract(int a, int b) {
-        return 0;
+        return a - b;
     }
 }
