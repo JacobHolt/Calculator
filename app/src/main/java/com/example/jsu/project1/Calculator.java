@@ -45,37 +45,63 @@ public class Calculator extends AppCompatActivity {
             textViewString = textViewString + " - ";
             textView.setText(textViewString);
         }
-        else if(id.contains("Clear")) {
+        else if(id.contains("clear")) {
             textView.setText("");
             textViewString = "";
         }
         else if(id.contains("equals")) {
-
+            textView.setText("" + equalsSign());
         }
-        else if(id.contains("switch")) {
-
+        else if(id.contains("changeSigns")) {
+            if(textViewString.contains("-")) {
+                textViewString = textViewString.replaceAll("- ", "");
+                textView.setText(textViewString);
+            }
+            else { textViewString = "- " + textViewString; textView.setText(textViewString); }
         }
         else if(id.contains("decimal")) {
-
+            textViewString = textViewString + ".";
+            textView.setText(textViewString);
         }
-        else if(id.contains("percentage")) {
-
+        else if(id.contains("percent")) {
+            textViewString += "%";
+            textView.setText(textViewString);
         }
         else if(id.contains("sqrt")) {
+            double numSqrt = Integer.parseInt(textViewString);
+            textView.setText("" + Math.sqrt(numSqrt));
 
         }
     }
 
-    public int multiply(int a, int b) {
-        return a * b;
-    }
-    public int divide(int a, int b) {
-        return a / b;
-    }
-    public int add(int a, int b) {
-        return a + b;
-    }
-    public int subtract(int a, int b) {
-        return a - b;
+    public double equalsSign() {
+
+        TextView textView = (TextView) findViewById(R.id.mainText);
+        String textViewString = textView.getText().toString();
+        String[] parts = textViewString.split("(?=[-/*+%])|(?<=[-/*+%])");
+        double result = Double.parseDouble(parts[0]);
+        for (int i = 1; i < parts.length; i += 2) {
+            String op = parts[i];
+            double val = Double.parseDouble(parts[i+1]);
+            switch (op) {
+                case "*" :
+                    result *= val;
+                    break;
+                case "/" :
+                    result /= val;
+                    break;
+                case "-" :
+                    result -= val;
+                    break;
+                case "+" :
+                    result += val;
+                    break;
+                case "%" :
+                    result *= val/100;
+                    break;
+
+            }
+        }
+        return result;
     }
 }
