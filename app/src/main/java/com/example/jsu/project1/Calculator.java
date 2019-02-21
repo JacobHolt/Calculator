@@ -20,38 +20,50 @@ public class Calculator extends AppCompatActivity {
     public void onClick(View v) {
         String id = (v.getResources().getResourceName(v.getId())).split("/")[1];
         TextView textView = (TextView) findViewById(R.id.mainText);
-        String textViewString = "";
+        String textViewString = textView.getText().toString();
         int number;
 
         if(id.contains("button")) {
             String numberString = id.replaceAll("[^0-9]", "");
             number = Integer.parseInt(numberString);
-            if(textViewString == "") {
-                textViewString = "" + number;
-                textView.setText(textViewString);
-            }
-            else {
-                textViewString = textViewString + " " + number;
-                textView.setText(textViewString);
-            }
+            textViewString = textViewString + number;
+            textView.setText(textViewString);
         }
         else if(id.contains("multiply")){
-            textViewString = textViewString + " *";
+            textViewString = textViewString + " * ";
             textView.setText(textViewString);
         }
         else if(id.contains("divide")){
-            textViewString = textViewString + " /";
+            textViewString = textViewString + " / ";
             textView.setText(textViewString);
         }
         else if(id.contains("plus")){
-            textViewString = textViewString + " +";
+            textViewString = textViewString + " + ";
             textView.setText(textViewString);
         }
         else if(id.contains("minus")){
-            textViewString = textViewString + " -";
+            textViewString = textViewString + " - ";
             textView.setText(textViewString);
         }
+        else if(id.contains("Clear")) {
+            textView.setText("");
+            textViewString = "";
+        }
+        else if(id.contains("equals")) {
 
+        }
+        else if(id.contains("switch")) {
+
+        }
+        else if(id.contains("decimal")) {
+
+        }
+        else if(id.contains("percentage")) {
+
+        }
+        else if(id.contains("sqrt")) {
+
+        }
     }
 
     public int multiply(int a, int b) {
