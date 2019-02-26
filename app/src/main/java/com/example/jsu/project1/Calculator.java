@@ -64,13 +64,12 @@ public class Calculator extends AppCompatActivity {
             textView.setText(textViewString);
         }
         else if(id.contains("percent")) {
-            textViewString += "%";
+            textViewString += "% ";
             textView.setText(textViewString);
         }
         else if(id.contains("sqrt")) {
             double numSqrt = Integer.parseInt(textViewString);
             textView.setText("" + Math.sqrt(numSqrt));
-
         }
     }
 
@@ -78,7 +77,8 @@ public class Calculator extends AppCompatActivity {
 
         TextView textView = (TextView) findViewById(R.id.mainText);
         String textViewString = textView.getText().toString();
-        String[] parts = textViewString.split("(?=[-/*+%])|(?<=[-/*+%])");
+        String[] parts = textViewString.split("(?=[-/*+])|(?<=[-/*+])");
+        System.out.println(Arrays.toString(parts));
         double result = Double.parseDouble(parts[0]);
         for (int i = 1; i < parts.length; i += 2) {
             String op = parts[i];
@@ -96,10 +96,9 @@ public class Calculator extends AppCompatActivity {
                 case "+" :
                     result += val;
                     break;
-                case "%" :
+                case "%d" :
                     result *= val/100;
                     break;
-
             }
         }
         return result;
